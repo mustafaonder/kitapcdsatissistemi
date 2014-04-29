@@ -18,6 +18,12 @@ private String email;
 private String sifre;
 private int telefonno;
 private String adres;
+private String bilgi="";
+int i;
+
+    public String getBilgi() {
+        return bilgi;
+    }
 public String getIsim() {
 	return isim;
 }
@@ -89,7 +95,7 @@ public void setAdres(String adres) {
 	  ps.setString(6,sifre);
 	  ps.setInt(7,telefonno);
 	  ps.setString(8,adres);
-	  ps.executeUpdate();
+	  i=ps.executeUpdate();
 	  } 
 	  catch(Exception e)
 	  {
@@ -106,6 +112,14 @@ public void setAdres(String adres) {
 			{
 				e.printStackTrace();
 			}
-		}	  
+		}
+          if(i>0)
+          {
+              bilgi="BİLGİLERİNİZ VERİ TABANINA KAYDEDİLDİ.TEŞEKKÜRLER";
+          }
+          else
+          {
+              bilgi="KAYIT SIRASINDA HATA OLUŞTU";
+          }
   }
 }
