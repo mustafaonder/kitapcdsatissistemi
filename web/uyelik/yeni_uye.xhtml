@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      
+    <h:head>
+        <title>Kitap &amp; CD satış sitesi</title>
+        <h:outputStylesheet library="css" name="style.css" />
+           <h:outputScript library="javascript" name="control.js" />
+    </h:head>
+    <h:body>
+        <div id="up_bar_bg"></div>
+        
+        <div id="main">
+             
+            <div id="header">
+                <ui:include src="../header.xhtml" />
+            </div>
+            
+            <div id="content">
+                
+                <div id="sample_div">
+                    <h3>Yeni Üye Formu</h3>
+                    <h:form id="new">
+                        <li><h:inputText id="adi" value='#{uyeKayit.isim}' class="inp" p:placeholder="Adı" />
+                            <h:inputText id="soyadi" value='#{uyeKayit.soyisim}' class="inp" p:placeholder="Soyadı" />
+                        </li>
+                        <li>
+                            <h:inputText id="dogum_t" value='#{uyeKayit.dogum_tarihi}' class="inp" p:placeholder="Doğum Tarihi" />
+                            <h:inputText id="user_id" value='#{uyeKayit.kullanici_adi}' class="inp" p:placeholder="Kullanıcı adı" />
+                        </li>
+                        <li>
+                            <h:inputText id="email" value='#{uyeKayit.email}'  class="inp" p:placeholder="Email"  />
+                             <h:inputText id="emailt" onblur="sameness('new:email', 'new:emailt', 'Email adresleri')"  class="inp" p:placeholder="Email(Tekrar)" />
+                        </li>
+                        <li>
+                            <h:inputSecret  id="sifre" value='#{uyeKayit.sifre}'   class="inp"  p:placeholder="Şifre" />
+                            <h:inputSecret  id="sifret"  class="inp" onblur="sameness('new:sifre', 'new:sifret', 'Şifreler')" p:placeholder="Şifre(Tekrar)" />
+                        </li>
+                        <li>
+                            <h:inputText id="cepno" value='#{uyeKayit.telefonno}' class="inp" maxlength="10" onkeypress="return isNumberOnly(event);" p:placeholder="Cep Telefonu" />
+                            <h:inputTextarea id="adres" value='#{uyeKayit.adres}' style="height:80px;" class="inp" p:placeholder="Adres" />
+                        </li>
+                        
+                        <li style="margin-top:60px;line-height:40px;">
+                            <p style="float:left;width:206px;margin-left:20px;font-family:Arial;font-size:14px;color:red;font-weight:bold;" id="warning_text"></p>
+
+                            <h:commandButton id="new_uye"  class="inp" onclick="return test();" action="#{uyeKayit.veritabaninaaktar()}" style="float:right;margin-right:75px;width:100px;" value="Kayıt Ol" />
+                        </li>
+                    </h:form>
+                    <h:graphicImage url="#{resource['images/uye/new_user.png']}" style="top:10px;position:relative;left:40px;top:50px;" />
+               </div>
+               <ui:include src="../right_side.xhtml" />
+                
+            </div>
+            
+            
+            <div id="footer">
+                <ui:include src="../footer.xhtml" />
+            </div>
+        </div>
+        
+    </h:body>
+</html>

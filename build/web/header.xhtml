@@ -1,0 +1,96 @@
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+      <h:outputStylesheet library="css" name="style.css" />
+   <div style="list-style-type:none; " id="up_bar">
+                
+               <li style="margin-right:1px;float:right;">
+                   <a href="#{request.contextPath}/uyelik/yeni_uye.xhtml">Yeni Üyelik</a>
+                   
+                   <span style="color:white;"> | </span>
+                   <a href="#{request.contextPath}/uyelik/uye_giris.xhtml">Üye Girişi</a>
+               </li>
+               <li style="float:right;"><a href="#">Yardım</a></li>
+
+               <li style="border-left-width:1px;float:right;"><a style="margin-left:3px;" href="#{request.contextPath}/uyelik/siparis-takibi.xhtml">Sipariş Takibi</a></li>
+           
+    </div>
+    <div id="icon">
+       
+    </div>
+    <div id="search">
+        <h:form>
+            <h:inputText class="search_field" p:placeholder="Aranacak kelimeyi yazınız..."/>
+            <h:commandButton  image="#{resource['images/search_icon.png']}" class="search_icon" />
+        </h:form>
+        
+    </div>
+    <div id="commerce_basket">
+        <h:form>
+            <h:commandButton image="#{resource['images/cart-icon.png']}"  style="float:left;"/>
+        
+        <h:commandButton class="cart_text" value="Sepetim(0)" />
+        </h:form>
+    </div>
+    <div id="menu">
+        <ul><li style="border-left-width:2px; "><a href="#">Kitap</a>
+                <ul>
+                    <li><a href="#">Kitap2</a></li>
+                    
+                </ul>
+            </li>     
+        </ul>
+         <ul><li><a href="#">E-Kitap</a>
+                <ul>
+                    <li><a href="#">Kitap2</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            
+        </ul>
+        
+        <ul><li><a href="#">Film</a>
+                <ul>
+                    <li><a href="#">Kitap2</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            
+        </ul>
+        <ul><li><a href="#">Müzik</a>
+                <ul>
+                    <li><a href="#">Kitap2</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            
+        </ul>
+        
+        <ul><li><a href="#">Oyun</a>
+                <ul>
+                    <li><a href="#">Kitap2</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    </div>
+    
+</ui:composition>

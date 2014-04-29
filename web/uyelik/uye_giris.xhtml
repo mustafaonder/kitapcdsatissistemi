@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      
+    <h:head>
+        <title>Kitap &amp; CD satış sitesi</title>
+        <h:outputStylesheet library="css" name="style.css" />
+           <h:outputScript library="javascript" name="control.js" />
+           
+    </h:head>
+    <h:body onload="div_sil('most_sell')">
+        <div id="up_bar_bg"></div>
+        
+        <div id="main">
+             
+            <div id="header">
+                <ui:include src="../header.xhtml" />
+            </div>
+            
+            <div id="content">
+                
+                <div style="margin-top:20px;margin-left:30px;" id="uye_kayit_form">
+                    <h3 style="margin-left:30px;width:300px;">Üye Girişi</h3>
+                    <h:form id="new">
+                        <li style="width:400px;"><h:inputText style="width:250px;" class="inp"  p:placeholder="Kullanıcı adı veya E-mail" /></li>
+                        <li style="width:400px;"><h:inputSecret style="width:250px;" class="inp" p:placeholder="Şifre" /></li>
+                        
+                        
+                        <li style="float:none;position:relative;width:200px;">
+                           
+                                <h:commandButton class="inp" style="width:100px;" value="Giriş Yap" />
+                            <p id="warning_text"></p>
+                        </li>
+                    </h:form>
+                    <h:graphicImage style="margin-left:30px;" url="#{resource['images/uye/login_icon.png']}"  />
+               </div>
+               
+                <ui:include  src="../right_side.xhtml" />
+            </div>
+            
+            
+            <div id="footer">
+                <ui:include src="../footer.xhtml" />
+            </div>
+        </div>
+        
+    </h:body>
+</html>
