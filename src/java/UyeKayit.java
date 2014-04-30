@@ -16,7 +16,7 @@ private Date dogum_tarihi;
 private String kullanici_adi;
 private String email;
 private String sifre;
-private int telefonno;
+private String telefonno;
 private String adres;
 private String bilgi="";
 int i;
@@ -63,10 +63,10 @@ public void setSifre(String sifre) {
 	this.sifre = sifre;
 }
 
-public int getTelefonno() {
+public String getTelefonno() {
 	return telefonno;
 }
-public void setTelefonno(int telefonno) {
+public void setTelefonno(String telefonno) {
 	this.telefonno = telefonno;
 }
 public String getAdres() {
@@ -93,7 +93,7 @@ public void setAdres(String adres) {
 	  ps.setString(4, kullanici_adi);
 	  ps.setString(5,email);
 	  ps.setString(6,sifre);
-	  ps.setInt(7,telefonno);
+	  ps.setString(7,telefonno);
 	  ps.setString(8,adres);
 	  i=ps.executeUpdate();
 	  } 

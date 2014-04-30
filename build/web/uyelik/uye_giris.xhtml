@@ -13,9 +13,9 @@
            
     </h:head>
     <h:body onload="div_sil('most_sell')">
-        <div id="up_bar_bg"></div>
+         <ui:include src="../upbar.xhtml" />
         
-        <div id="main">
+        <div id="main" class="clearfix">
              
             <div id="header">
                 <ui:include src="../header.xhtml" />
@@ -23,20 +23,24 @@
             
             <div id="content">
                 
-                <div style="margin-top:20px;margin-left:30px;" id="uye_kayit_form">
-                    <h3 style="margin-left:30px;width:300px;">Üye Girişi</h3>
-                    <h:form id="new">
-                        <li style="width:400px;"><h:inputText style="width:250px;" class="inp"  p:placeholder="Kullanıcı adı veya E-mail" /></li>
-                        <li style="width:400px;"><h:inputSecret style="width:250px;" class="inp" p:placeholder="Şifre" /></li>
-                        
-                        
-                        <li style="float:none;position:relative;width:200px;">
-                           
-                                <h:commandButton class="inp" style="width:100px;" value="Giriş Yap" />
-                            <p id="warning_text"></p>
-                        </li>
-                    </h:form>
-                    <h:graphicImage style="margin-left:30px;" url="#{resource['images/uye/login_icon.png']}"  />
+                <div id="sample_div" style="min-height:302px;">
+                    <div id="left_section" style="min-height:300px;padding-left:20px;">
+                        <h3 style="margin-left:30px auto;width:auto;">Üye Girişi</h3>
+                        <h:form id="new">
+                            <li class="form_box"><h:inputText style="width:250px;" class="inp"  p:placeholder="Kullanıcı adı veya E-mail" /></li>
+                            <li class="form_box"><h:inputSecret style="width:250px;" class="inp" p:placeholder="Şifre" /></li>
+
+
+                            <li style="float:none;position:relative;width:200px;">
+
+                                    <h:commandButton class="inp" style="width:100px;" value="Giriş Yap" />
+                                <p id="warning_text"></p>
+                            </li>
+                        </h:form>
+                        </div>
+                    <div id="right_section">
+                        <h:graphicImage style="display: block;margin: 0 auto;position:relative;top: 5%;" url="#{resource['images/uye/login_icon.png']}"  />
+                    </div>
                </div>
                
                 <ui:include  src="../right_side.xhtml" />

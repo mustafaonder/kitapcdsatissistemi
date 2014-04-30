@@ -12,9 +12,9 @@
            <h:outputScript library="javascript" name="control.js" />
     </h:head>
     <h:body>
-        <div id="up_bar_bg"></div>
         
-        <div id="main">
+        <ui:include src="../upbar.xhtml" />
+        <div id="main" class="clearfix">
              
             <div id="header">
                 <ui:include src="../header.xhtml" />
