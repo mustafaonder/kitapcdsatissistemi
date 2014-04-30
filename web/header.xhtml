@@ -6,17 +6,21 @@
     xmlns:ui="http://java.sun.com/jsf/facelets">
       <h:outputStylesheet library="css" name="style.css" />
    <div style="list-style-type:none; " id="up_bar">
-                
+       <h:form>
                <li style="margin-right:1px;float:right;">
-                   <a href="#{request.contextPath}/uyelik/yeni_uye.xhtml">Yeni Üyelik</a>
+                   
+                       <h:commandLink value="Yeni Üyelik" action="uyelik/yeni_uye.xhtml?faces-redirect=true"/>
+                   
                    
                    <span style="color:white;"> | </span>
-                   <a href="#{request.contextPath}/uyelik/uye_giris.xhtml">Üye Girişi</a>
+                   <h:commandLink value="Üye Girişi" action="uyelik/uye_giris.xhtml?faces-redirect=true"/>
                </li>
                <li style="float:right;"><a href="#">Yardım</a></li>
 
-               <li style="border-left-width:1px;float:right;"><a style="margin-left:3px;" href="#{request.contextPath}/uyelik/siparis-takibi.xhtml">Sipariş Takibi</a></li>
-           
+               <li style="border-left-width:1px;float:right;">
+                   <h:commandLink value="Sipariş Takibi" action="uyelik/siparis-takibi.xhtml?faces-redirect=true"/>
+               </li>
+           </h:form>
     </div>
     <div id="icon">
        
