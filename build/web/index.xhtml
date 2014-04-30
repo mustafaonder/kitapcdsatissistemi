@@ -8,30 +8,26 @@
       
     <h:head>
         <title>Kitap &amp; CD satış sitesi</title>
-       
+       <h:outputStylesheet library="css" name="style.css" />
         <h:outputScript library="javascript" name="transitions.js" />
            
     </h:head>
     <h:body>
-        <!--<div style="list-style-type:none;" id="navigator">
-                    <li style="float:left;"><a href="#">Sipariş Takibi</a></li>
-                    <li style="float:right;">Geri</li>
-                </div>-->
-        <div id="up_bar_bg"></div>
-        <div id="main">
+       
+        
+       <ui:include src="upbar.xhtml" />
+        <div id="main" class="clearfix">
              
             <div id="header">
                 <ui:include src="header.xhtml" />
             </div>
-            
             <div id="content">
                  <ui:include src="content.xhtml" />
             </div>
             
             <div id="footer">
                 <ui:include src="footer.xhtml" />
-            </div>test
+            </div>
         </div>
-        
     </h:body>
 </html>
