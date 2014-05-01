@@ -255,11 +255,11 @@ body {
 }
 .campaign_image_handler{
     background-color:gray;
-    opacity:0.4;
+    opacity:0.3;
 }
 
 .campaign_image_handler:hover {
-    opacity:0.7;
+    opacity:0.5;
     
 }
 #right_side {

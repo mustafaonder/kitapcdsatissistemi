@@ -99,7 +99,7 @@ public void setAdres(String adres) {
 	  } 
 	  catch(Exception e)
 	  {
-		  System.out.print(e);
+		  bilgi="KAYIT SIRASINDA HATA OLUŞTU";
 	  }
 	  finally
 		{
